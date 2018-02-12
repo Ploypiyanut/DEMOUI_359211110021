@@ -10,8 +10,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="500.0" style="-fx-background-color: #baffff;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="500.0" style="-fx-background-color: #baffff;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <Pane layoutX="-10.0" prefHeight="400.0" prefWidth="250.0" style="-fx-background-color: #00e5ff;">
          <children>
@@ -40,7 +39,7 @@
             <Image url="@../image/icons8_Lock_50px.png" />
          </image>
       </ImageView>
-      <JFXButton layoutX="294.0" layoutY="166.0" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #00b2cc;" text="Login">
+      <JFXButton layoutX="294.0" layoutY="166.0" onAction="#Login" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #00b2cc;" text="Login">
          <font>
             <Font size="14.0" />
          </font>
