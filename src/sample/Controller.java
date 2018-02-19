@@ -1,9 +1,11 @@
 package sample;
 
+import Admin.AdminContrcller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -48,7 +50,7 @@ public class Controller implements Initializable {
 
 
             } else{
-                JOptionPane.showMessageDialog(null,"Your username or " + "password is not corrected.");
+                JOptionPane.showMessageDialog(null,"Your username or " + "password is invalid.");
             }
         }catch (Exception localException){
             localException.printStackTrace();
@@ -56,16 +58,26 @@ public class Controller implements Initializable {
     }//Login
 
     private void adminLogin() {
+//        JOptionPane.showMessageDialog(null,"Welcome to Our System. ");
         try {
-            Stage adminstage = new Stage();
+            Stage adminStage = new Stage();
             FXMLLoader adminLoader = new FXMLLoader();
             Pane adminRoot = (Pane) adminLoader.load(getClass().getResource("/Admin/AdminDashBoard.fxml").openStream());
+
+            AdminContrcller adminController = (AdminContrcller) adminLoader.getController();
+            Scene scene = new Scene(adminRoot);
+            adminStage.setScene(scene);
+            adminStage.setTitle("Admin Dash-Board");
+            adminStage.setResizable(false);
+            adminStage.show();
+
+
         }catch (IOException ex){
             ex.printStackTrace();
         }
 
 
-    }
+    }//adminLogin
 
 
 }

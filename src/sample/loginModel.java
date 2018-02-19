@@ -31,8 +31,8 @@ public class loginModel {
         String sql = "SELECT * FROM user where username = ? and " + "Password = ?";
         try {
             pr = this.connection.prepareStatement(sql);
-            pr.setString(2,user);
-            pr.setString(3,pass);
+            pr.setString(1,user);
+            pr.setString(2,pass);
 
             rs = pr.executeQuery();
 

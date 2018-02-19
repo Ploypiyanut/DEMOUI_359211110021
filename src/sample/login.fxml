@@ -39,12 +39,12 @@
             <Image url="@../image/icons8_Lock_50px.png" />
          </image>
       </ImageView>
-      <JFXButton layoutX="294.0" layoutY="166.0" onAction="#Login" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #00b2cc;" text="Login">
+      <JFXButton fx:id="btnLogin" layoutX="294.0" layoutY="166.0" onAction="#Login" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #00b2cc;" text="Login">
          <font>
             <Font size="14.0" />
          </font>
       </JFXButton>
       <Label layoutX="253.0" layoutY="351.0" prefHeight="17.0" prefWidth="63.0" text="DB Status" />
-      <Label layoutX="316.0" layoutY="351.0" prefHeight="17.0" prefWidth="159.0" />
+      <Label fx:id="dbStatus" layoutX="316.0" layoutY="351.0" prefHeight="17.0" prefWidth="159.0" />
    </children>
 </AnchorPane>
